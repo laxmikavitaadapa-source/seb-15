@@ -1,8 +1,8 @@
 git init.
 
-git config --global user.name "N.Raghuveer"
+git config --global user.name "A.hemanth naga sai"
 
-git config --global user.email "2400032843@kluniversity.in"
+git config --global user.email "24000320992@kluniversity.in"
 
 git add .
 
