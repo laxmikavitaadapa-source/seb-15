@@ -6,9 +6,9 @@ First time developer or new developer*/
 
 git init.
 
-git config --global user.name "Jaikiran721".
+git config --global user.name "Hemanth naga sai".
 
-git config --global user email "2400030721@kluniversity.in".
+git config --global user email "2400030992@kluniversity.in".
 
 "Add files"/
 
