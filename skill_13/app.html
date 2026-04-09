@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KL Student Portal</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Light Theme */
+    .light-theme {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    /* Dark Theme */
+    .dark-theme {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    nav {
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid gray;
+    }
+
+    button {
+      padding: 7px 14px;
+      cursor: pointer;
+    }
+
+    .dashboard {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body class="light-theme">
+  <!-- Navbar -->
+  <nav id="navbar">
+    <h2>KL Student Portal</h2>
+    <button id="themeButton">Switch to Dark Mode</button>
+  </nav>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <h3>Welcome Student</h3>
+    <p>Current theme: <b id="themeText">LIGHT</b></p>
+  </div>
+
+  <script>
+    // -----------------------
+    // THEME LOGIC (React-like)
+    // -----------------------
+    let theme = "light";
+
+    const themeButton = document.getElementById("themeButton");
+    const themeText = document.getElementById("themeText");
+
+    function toggleTheme() {
+      theme = theme === "light" ? "dark" : "light";
+
+      // Apply class to body
+      document.body.className = theme === "light" ? "light-theme" : "dark-theme";
+
+      // Update button text
+      themeButton.textContent =
+        theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode";
+
+      // Update dashboard text
+      themeText.textContent = theme.toUpperCase();
+    }
+
+    // Add event listener
+    themeButton.addEventListener("click", toggleTheme);
+  </script>
+</body>
+</html>
